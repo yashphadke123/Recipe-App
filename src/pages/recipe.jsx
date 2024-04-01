@@ -26,18 +26,16 @@ function Recipe() {
         <Buttonin className={activeTab ==='instructions'?'active':''} onClick={()=>setActiveTab('instructions')}>Instructions</Buttonin>
         <Buttonig className={activeTab ==='ingredients'?'active':''} onClick={()=>setActiveTab('ingredients')}>Ingredients</Buttonig>
         {activeTab ==='instructions'&&(
-          <Ing>
+          <Ins>
             <h6 dangerouslySetInnerHTML={{__html:details.summary}}></h6 >
             <h6 dangerouslySetInnerHTML={{__html:details.instructions}}></h6>
-          </Ing>
+          </Ins>
         )
         } 
         {activeTab === 'ingredients' &&(
-          <ul>
-              {details.extendedIngredients.map((ingredients)=>{
-                <li key={ingredients.id}>{ingredients.original}</li>
-              })}
-          </ul> 
+          <div>
+              {details.extendedIngredients.id}
+          </div> 
         )}
       </Info>
     </DetailWrapper>
@@ -96,7 +94,9 @@ left:-1.8rem;
 const Info = styled.div`
 margin-left:350px;`
 
-const Ing = styled.div`
-margin-left:-10rem;
-width:7rem;`
+const Ins = styled.div`
+margin-left:-17rem;
+width:25rem;
+font-size:19px`
+
 export default Recipe

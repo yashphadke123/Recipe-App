@@ -42,7 +42,7 @@ grid-gap:3rem;
 const Card = styled.div`
 img{
   width:100%;
-  border10px;
+  border:10px;
   object-fit:cover;
 }
 a{
